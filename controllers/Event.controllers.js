@@ -1,6 +1,6 @@
 const Events = require('express').Router();
-const { Op } = require('sequilize');
-const db = require('../models');
+import { Op } from 'sequilize';
+import db from '../models';
 const { Event } = db;
 
 
@@ -68,4 +68,4 @@ Event.delete('/:id', async (req, res) => {
     }
 });
 
-module.exports= Event
+export default Event;
